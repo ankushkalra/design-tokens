@@ -2,6 +2,8 @@
 
 A collection of reusable design tokens for building consistent, scalable, and maintainable user interfaces.
 
+![Attractive Design Tokens](https://raw.githubusercontent.com/ankushkalra/design-tokens/main/assets/banner.png)
+
 The tokens are maintained in a centralized repository and can be consumed across different projects and technologies.
 
 ## Installation
