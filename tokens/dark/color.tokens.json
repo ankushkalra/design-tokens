@@ -15,6 +15,12 @@
     "secondary": {
       "$type": "color",
       "$value": "{color.rose}"
+    },
+    "background": {
+      "primary": {
+        "$type": "color",
+        "$value": "#121212"
+      }
     }
   }
 }
