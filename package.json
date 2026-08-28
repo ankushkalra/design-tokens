@@ -1,0 +1,25 @@
+{
+  "name": "design-tokens",
+  "version": "0.1.0",
+  "description": "A collection of design tokens",
+  "type": "module",
+  "scripts": {
+    "build": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.13.1",
+      "onFail": "download"
+    }
+  },
+  "dependencies": {
+    "style-dictionary": "^5.5.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}
