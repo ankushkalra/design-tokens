@@ -20,6 +20,10 @@
       "primary": {
         "$type": "color",
         "$value": "#ffffff"
+      },
+      "raised": {
+        "$type": "color",
+        "$value": "#242424"
       }
     }
   }
