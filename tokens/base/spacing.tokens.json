@@ -1,5 +1,9 @@
 {
   "spacing": {
+    "extra-small": {
+      "$type": "dimension",
+      "$value": "6px"
+    },
     "small": {
       "$type": "dimension",
       "$value": "12px"
@@ -10,7 +14,11 @@
     },
     "large": {
       "$type": "dimension",
-      "$value": "20px"
+      "$value": "24px"
+    },
+    "extra-large": {
+      "$type": "dimension",
+      "$value": "48px"
     }
   }
 }

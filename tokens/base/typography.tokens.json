@@ -11,6 +11,10 @@
     "large": {
       "$type": "dimension",
       "$value": "24px"
+    },
+    "extra-large": {
+      "$type": "dimension",
+      "$value": "48px"
     }
   },
   "fontWeight": {
