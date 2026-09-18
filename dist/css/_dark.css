@@ -3,10 +3,10 @@
  */
 
 :root {
-  --breakpoints-sm: 640px;
-  --breakpoints-md: 768px;
-  --breakpoints-lg: 1024px;
-  --breakpoints-xl: 1280px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
   --spacing-extra-small: 6px;
   --spacing-small: 12px;
   --spacing-medium: 16px;

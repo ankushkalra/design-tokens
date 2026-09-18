@@ -1,6 +1,27 @@
 import fs from "fs";
 import StyleDictionary from "style-dictionary";
 
+StyleDictionary.registerFormat({
+  name: "css/custom-media",
+  format: function ({ dictionary }) {
+    const breakpoints = dictionary.allTokens.filter(
+      (token) => token.path[0] === "breakpoint",
+    );
+
+    if (breakpoints.length === 0) {
+      return `/* No breakpoints found under the 'breakpoint' path key */`;
+    }
+
+    return breakpoints
+      .map((token) => {
+        const name = token.path[1];
+        const value = token.$value;
+        return `@custom-media --breakpoint-${name} (min-width: ${value});`;
+      })
+      .join("\n");
+  },
+});
+
 const darkSD = new StyleDictionary({
   source: ["tokens/base/*.tokens.json", "tokens/dark/*.tokens.json"],
   platforms: {
@@ -14,6 +35,10 @@ const darkSD = new StyleDictionary({
           options: {
             selector: ":root",
           },
+        },
+        {
+          destination: "_media-queries.css",
+          format: "css/custom-media",
         },
       ],
     },
@@ -50,4 +75,9 @@ await lightSD.buildAllPlatforms();
 
 const dark = fs.readFileSync("dist/css/_dark.css", "utf8");
 const light = fs.readFileSync("dist/css/_light.css", "utf8");
-fs.writeFileSync("dist/css/variables.css", dark + "\n" + light);
+const mediaQueries = fs.readFileSync("dist/css/_media-queries.css", "utf8");
+
+fs.writeFileSync(
+  "dist/css/variables.css",
+  dark + "\n" + light + "\n" + mediaQueries,
+);

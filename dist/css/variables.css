@@ -3,10 +3,10 @@
  */
 
 :root {
-  --breakpoints-sm: 640px;
-  --breakpoints-md: 768px;
-  --breakpoints-lg: 1024px;
-  --breakpoints-xl: 1280px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
   --spacing-extra-small: 6px;
   --spacing-small: 12px;
   --spacing-medium: 16px;
@@ -33,10 +33,10 @@
  */
 
 [data-theme="light"] {
-  --breakpoints-sm: 640px;
-  --breakpoints-md: 768px;
-  --breakpoints-lg: 1024px;
-  --breakpoints-xl: 1280px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
   --spacing-extra-small: 6px;
   --spacing-small: 12px;
   --spacing-medium: 16px;
@@ -57,3 +57,9 @@
   --color-background-primary: #ffffff;
   --color-background-raised: #242424;
 }
+
+@custom-media --breakpoint-sm (min-width: 640px);
+@custom-media --breakpoint-md (min-width: 768px);
+@custom-media --breakpoint-lg (min-width: 1024px);
+@custom-media --breakpoint-xl (min-width: 1280px);
+
